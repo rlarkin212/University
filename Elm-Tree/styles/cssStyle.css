@@ -1,0 +1,79 @@
+﻿
+body{	
+
+	padding-top: 65px;
+	padding-bottom: 0px;
+
+
+}
+
+.jumbotron{
+
+background:url(../img/bg.jpg);
+
+background-position: center; 
+    padding-top: 148px;
+    padding-bottom: 148px;
+
+}
+
+
+.adminnav{
+     background-color:red;
+
+}
+
+.navbar-custom {
+	background-color:#229922;
+    color:#ffffff;
+  	border-radius:0;
+}
+  
+.navbar-custom .navbar-nav > li > a {
+  	color:#fff;
+  	padding-left:20px;
+  	padding-right:20px;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+	background-color:transparent;
+}
+      
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #33aa33;
+}
+      
+.navbar-custom .navbar-brand {
+  	color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+  	background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+  	background-color:#33aa33;
+}
+
+
+a.selects:hover .col-md-8
+{
+    background-color: #bbb; 
+    color:white;
+}
+.carousel-control.right, .carousel-control.left {
+  background-image:none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+  footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
