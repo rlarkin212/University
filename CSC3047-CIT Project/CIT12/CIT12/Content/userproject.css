@@ -1,0 +1,92 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #3B3B3B;
+    text-align: center;
+}
+
+
+.jumbotron {
+    background-position: center;
+    padding-top: 148px;
+    padding-bottom: 148px;
+}
+
+
+.adminnav {
+    background-color: red;
+}
+
+.navbar-custom {
+    background-color: #229922;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+    .navbar-custom .navbar-nav > li > a {
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: transparent;
+    }
+
+    .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: #33aa33;
+    }
+
+    .navbar-custom .navbar-brand {
+        color: #eeeeee;
+    }
+
+    .navbar-custom .navbar-toggle {
+        background-color: #eeeeee;
+    }
+
+    .navbar-custom .icon-bar {
+        background-color: #33aa33;
+    }
+
+a.selects .col-md-8 {
+    color: black;
+}
+
+a.selects:hover .col-md-8 {
+    background-color: #888;
+    color: white;
+}
+
+.pad, .pad2 {
+    padding-top: 30px;
+}
+
+.pad2 {
+    padding-bottom: 20px;
+}
+
+.foot {
+    background-color: darkgrey;
+}
+
+#title {
+    width: 30%;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#menu-wrapper {
+    overflow: hidden;
+    height: 56px;
+    background: #339933;
+    border-top: 1px solid #3D2729;
+}

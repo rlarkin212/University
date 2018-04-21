@@ -1,0 +1,28 @@
+﻿.modal {
+    text-align: center;
+    padding: 0 !important;
+    Position: absolute;
+    Height: 400px;
+    Width: 600px;
+    margin-top: 12%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-open .modal.modal-allow-overflow {
+    overflow: visible;
+}

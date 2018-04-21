@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="CIT12.Student.Student" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QSIS - <%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon1.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/simplex/bootstrap.min.css" />
+    <%--local link for if cdn offline --%>
+    <link rel="stylesheet" type="text/css" href="../Content/flatly.css" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="StudentHome.aspx">
+                        <span>
+                            <img alt="QubLogo" src="../Images/logo1.png" style="height: 40px; padding-bottom: 11px;" /></span>
+                    </a>
+                </div>
+
+
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="StudentTimetable.aspx">Timetable</a></li>
+                        <li><a runat="server" href="StudentTeams.aspx">Team Management</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Academic <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="StudentModuleList.aspx">Module List</a></li>
+                                <li><a href="StudentAcademicRecord.aspx">Academic Record</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Room Booking<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+
+                                <li><a href="StudentRoomBooking.aspx">Book A Room</a></li>
+                                <li><a href="StudentYourRoomBookings.aspx">Your Room Bookings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <%--separate ul for login and logout buttons to pull to right--%>
+                    <ul class="nav navbar-nav navbar-right" style="padding-left: 5px">
+                        <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-danger navbar-btn" OnClick="btnLogout_Click" />
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container body-content">
+            <br />
+            <br />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer class="page-footer blue center-on-small-only">
+
+                <!--Footer Links-->
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!--Second column-->
+                        <div class="col-md-6">
+                            <h5 class="title">Links</h5>
+                            <ul>
+                                <li><a href="StudentHome.aspx">Home</a></li>
+                                <li><a href="StudentTimetable.aspx">Timetable</a></li>
+                                <li><a href="StudentModuleList.aspx">Module List</a></li>
+                                <li><a href="StudentRoomBooking.aspx">Room Booking</a></li>
+                                <li><a href="StudentYourRoomBookings.aspx">Your Room Bookings</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <div class="container-fluid">
+                        <p>&copy; <%: DateTime.Now.Year %> - CIT 12</p>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
